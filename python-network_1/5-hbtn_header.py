@@ -11,7 +11,6 @@ if __name__ == "__main__":
     url = sys.argv[1]
     headers = {'cfclearance': 'true'}
     r = requests.get(url, headers=headers)
-    
     x_request_id = r.headers.get('X-Request-Id')
     if x_request_id:
         print(x_request_id)
